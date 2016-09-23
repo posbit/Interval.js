@@ -87,5 +87,5 @@ Interval.minutes = function (n) {
     /** Returns a function that can be used to spawn
      *  Interval objects firing every n minutes.
      */
-    return Intrval.seconds(n*60);
+    return Interval.seconds(n*60);
 };
