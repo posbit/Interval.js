@@ -14,6 +14,7 @@
 function Interval(delay, fn) {
     var id = 0; // ID of the interval, required for cancelling it later 
     var counter = 0; // counts how many times the interval has fired, reset to 0 by .cancel()
+    var self = this;
 
     this.running = function () {
         /** Returns true if the Interval object is running, otherwise returns false.
@@ -41,7 +42,7 @@ function Interval(delay, fn) {
          *
          *  This is PRIVATE FUNCTION.
          */
-        id = setInterval(function () { fn(counter++); }, delay);
+        id = setInterval(function () { fn(counter++, self); }, delay);
     }
     this.restart = function (f) {
         /** Restart the interval.

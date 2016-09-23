@@ -56,6 +56,16 @@ iteration 2
 ...
 ```
 
+
+----
+
+## Callback parameters
+
+Function running in the interval receives two parameters:
+
+0. iteration counter (starting from zero)
+1. reference to the interval object
+
 ----
 
 ## Time helpers
